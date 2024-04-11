@@ -13,8 +13,8 @@ def binary_numbers_conversions():
 
 
 def binary_numbers_addition(): 
-    first_number = random.randint(0,256)
-    second_number = random.randint(0,256)
+    first_number = random.randint(0, 256)
+    second_number = random.randint(0, 256)
     answer = input(f"{bin(first_number).replace("b", "0")} \
 + {bin(second_number).replace("b", "0")} = ")
     result = bin(first_number + second_number).replace("b", "0")
