@@ -5,7 +5,7 @@ def binary_numbers_conversions():
     number = random.randint(0, 256)
     answer = input(f"represent {number} in binary (start with the first 1): ")
     result = bin(number)
-    if result == "0b" + answer:
+    if result[2:] == answer:
         print("Your answer is correct!")
     else:
         print(f"Wrong answer, the correct answer is \
@@ -18,17 +18,17 @@ def binary_numbers_addition():
     answer = input(f"{bin(first_number)[2:]} \
 + {bin(second_number)[2:]} = ")
     result = bin(first_number + second_number)
-    if result == answer:
+    if result[2:] == answer:
         print("Your answer is correct!")
     else:
         print(f"Wrong answer, the correct answer is {result[2:]}.")
 
 
-def hex_numbers_conversions(): 
+def hex_numbers_conversions():
     number = random.randint(0, 256)
-    answer = input(f"represent {number} in hexadecimal: ")
+    answer = input(f"represent {number} in hexadecimal (use small letters): ")
     result = hex(number)
-    if result == answer:
+    if result[2:] == answer:
         print("Your answer is correct!")
     else:
         print(f"Wrong answer, the correct answer is \
@@ -39,7 +39,7 @@ def octal_numbers_conversions():
     number = random.randint(0, 256)
     answer = input(f"represent {number} in octal: ")
     result = oct(number)
-    if result == answer:
+    if result[2:] == answer:
         print("Your answer is correct!")
     else:
         print(f"Wrong answer, the correct answer is \
