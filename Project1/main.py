@@ -8,7 +8,8 @@ def binary_numbers_conversions():
     if result == "0b" + answer:
         print("Your answer is correct!")
     else:
-        print(f"Wrong answer, the correct answer is {result.replace("b", "0")}.")
+        print(f"Wrong answer, the correct answer is \
+{result.replace("b", "0")}.")
 
 
 def binary_numbers_addition(): 
