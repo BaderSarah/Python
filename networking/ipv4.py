@@ -29,11 +29,11 @@ def calculate_adresses(hosts):
     # addresses
     network_address = ip_address
     first_host_address = network_portion + str(last) + ".1"
-    last_host_address = network_portion + str((bits - (int(prefix) - 32)) - 1 + last) + ".254"
-    broadcast_address = network_portion + str((bits - (int(prefix) - 32))+ last) + ".255"
+    last_host_address = network_portion + str((2 **(bits - 8)) - 1 + last) + ".254"
+    broadcast_address = network_portion + str((2 **(bits - 8)) - 1 + last) + ".255"
     address_range = (2 ** bits) - 2
-    ip_address =  network_portion + str(bits + last) + ".0" 
-    last += (bits - (int(prefix) - 32)) - 1 
+    last += (2 **(bits - 8)) 
+    ip_address =  network_portion + str(last ) + ".0" 
     return [network_address, first_host_address, last_host_address, broadcast_address, address_range]
 
 
